@@ -39,7 +39,7 @@ const coreTeam2024 = [
   },
 ]
 
-const eventsTeam = []
+const eventsTeam: Array<{ name: string; role: string; branch: string; year: string }> = []
 
 const contentMediaTeam = [
   {
