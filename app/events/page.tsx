@@ -8,16 +8,16 @@ import { useState } from 'react'
 const upcomingEvents = [
   {
     title: 'Yoga & Meditation Workshop',
-    date: '25 Feb 2024',
-    location: 'Main Auditorium',
+    date: '25 Feb 2026',
+    location: 'Sport Complex',
     description:
       'A comprehensive workshop on yoga asanas, pranayama, and meditation techniques for stress management and mental well-being.',
     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
   },
   {
     title: 'Swami Vivekananda Jayanti Celebration',
-    date: '12 Jan 2024',
-    location: 'VEC Hall',
+    date: '12 Jan 2026',
+    location: 'CAT HALL',
     description:
       'Annual celebration of Swami Vivekananda\'s birth anniversary with special sessions, discussions, and cultural programs.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
