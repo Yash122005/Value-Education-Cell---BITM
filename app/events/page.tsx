@@ -30,23 +30,9 @@ const pastEvents = [
   {
     year: 2025,
     events: [
-      // Add 2025 events here as they occur
-      // Example:
-      // {
-      //   title: 'Event Name',
-      //   date: '15 Jan 2025',
-      //   location: 'Location',
-      //   description: 'Description',
-      //   image: 'image-url',
-      // },
-    ],
-  },
-  {
-    year: 2024,
-    events: [
       {
         title: 'Personality Development Workshop',
-        date: '15 Jan 2024',
+        date: '15 Jan 2025',
         location: 'Conference Hall',
         description:
           'Expert-led workshop focusing on building confidence, communication skills, and leadership qualities.',
@@ -54,11 +40,40 @@ const pastEvents = [
       },
       {
         title: 'Swadhya Varg Discussion',
-        date: '10 Jan 2024',
+        date: '10 Jan 2025',
         location: 'VEC Hall',
         description:
           'Group discussion on Swami Vivekananda\'s teachings and their relevance in modern times.',
         image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+      },
+    ],
+  },
+  {
+    year: 2024,
+    events: [
+      {
+        title: 'National Youth Day Celebration',
+        date: '12 Jan 2024',
+        location: 'Main Auditorium',
+        description:
+          'Celebration of National Youth Day with various competitions, cultural programs, and inspirational talks.',
+        image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800',
+      },
+      {
+        title: 'Mind Games Competition',
+        date: '5 Dec 2024',
+        location: 'VEC Hall',
+        description:
+          'Intellectual competition featuring puzzles, quizzes, and brain teasers to enhance cognitive abilities.',
+        image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800',
+      },
+      {
+        title: 'Vedic Chanting Session',
+        date: '20 Nov 2024',
+        location: 'VEC Hall',
+        description:
+          'Special session on Vedic chanting and its significance in spiritual practice and mental peace.',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
       },
     ],
   },
