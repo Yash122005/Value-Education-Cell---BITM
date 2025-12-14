@@ -24,55 +24,54 @@ const upcomingEvents = [
   },
 ]
 
-const pastEvents = {
-  '2024': [
-    {
-      title: 'Personality Development Workshop',
-      date: '15 Jan 2024',
-      location: 'Conference Hall',
-      description:
-        'Expert-led workshop focusing on building confidence, communication skills, and leadership qualities.',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
-    },
-    {
-      title: 'Swadhya Varg Discussion',
-      date: '10 Jan 2024',
-      location: 'VEC Hall',
-      description:
-        'Group discussion on Swami Vivekananda\'s teachings and their relevance in modern times.',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
-    },
-  ],
-  '2023': [
-    {
-      title: 'National Youth Day Celebration',
-      date: '12 Jan 2023',
-      location: 'Main Auditorium',
-      description:
-        'Celebration of National Youth Day with various competitions, cultural programs, and inspirational talks.',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800',
-    },
-    {
-      title: 'Mind Games Competition',
-      date: '5 Dec 2023',
-      location: 'VEC Hall',
-      description:
-        'Intellectual competition featuring puzzles, quizzes, and brain teasers to enhance cognitive abilities.',
-      image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800',
-    },
-    {
-      title: 'Vedic Chanting Session',
-      date: '20 Nov 2023',
-      location: 'VEC Hall',
-      description:
-        'Special session on Vedic chanting and its significance in spiritual practice and mental peace.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
-    },
-  ],
-}
+// Past events stored as array with year as number property
+// This structure allows dynamic year filtering and easy addition of new events
+const pastEvents = [
+  {
+    year: 2025,
+    events: [
+      // Add 2025 events here as they occur
+      // Example:
+      // {
+      //   title: 'Event Name',
+      //   date: '15 Jan 2025',
+      //   location: 'Location',
+      //   description: 'Description',
+      //   image: 'image-url',
+      // },
+    ],
+  },
+  {
+    year: 2024,
+    events: [
+      {
+        title: 'Personality Development Workshop',
+        date: '15 Jan 2024',
+        location: 'Conference Hall',
+        description:
+          'Expert-led workshop focusing on building confidence, communication skills, and leadership qualities.',
+        image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
+      },
+      {
+        title: 'Swadhya Varg Discussion',
+        date: '10 Jan 2024',
+        location: 'VEC Hall',
+        description:
+          'Group discussion on Swami Vivekananda\'s teachings and their relevance in modern times.',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800',
+      },
+    ],
+  },
+]
 
 export default function Events() {
-  const [selectedYear, setSelectedYear] = useState<string | null>(null)
+  // Dynamically extract all years from event data structure (sorted descending)
+  // This allows future years to automatically appear in filters when added to data
+  const allYears = pastEvents.map((group) => group.year).sort((a, b) => b - a)
+  
+  // Default to latest year (2025) - dynamically determined from data structure
+  // This ensures the most recent year is selected by default, even if it has no events yet
+  const [selectedYear, setSelectedYear] = useState<number | 'all'>(allYears[0] || 'all')
 
   return (
     <div>
@@ -123,44 +122,58 @@ export default function Events() {
             <p className="text-lg text-gray-600 dark:text-gray-400">A look back at our previous activities</p>
           </motion.div>
 
-          {/* Year Filter */}
+          {/* Year Filter - Dynamically generated from event data */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {Object.keys(pastEvents)
-              .sort()
-              .reverse()
-              .map((year) => (
-                <button
-                  key={year}
-                  onClick={() => setSelectedYear(selectedYear === year ? null : year)}
-                  className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                    selectedYear === year
-                      ? 'bg-saffron-600 dark:bg-saffron-500 text-white'
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
-                  }`}
-                >
-                  {year}
-                </button>
-              ))}
+            {/* "All" filter button */}
+            <button
+              onClick={() => setSelectedYear('all')}
+              className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+                selectedYear === 'all'
+                  ? 'bg-saffron-600 dark:bg-saffron-500 text-white'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+              }`}
+            >
+              All
+            </button>
+            {/* Year filter buttons - dynamically generated from all years in data structure */}
+            {allYears.map((year) => (
+              <button
+                key={year}
+                onClick={() => setSelectedYear(year)}
+                className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+                  selectedYear === year
+                    ? 'bg-saffron-600 dark:bg-saffron-500 text-white'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-saffron-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                }`}
+              >
+                {year}
+              </button>
+            ))}
           </div>
 
-          {/* Events by Year */}
+          {/* Events by Year - Filtered based on selectedYear */}
           <div className="space-y-12">
-            {Object.entries(pastEvents)
-              .sort(([a], [b]) => parseInt(b) - parseInt(a))
-              .map(([year, events]) => {
-                if (selectedYear && selectedYear !== year) return null
+            {pastEvents
+              .filter((group) => {
+                // Show all years if "all" is selected, otherwise filter by selected year
+                if (selectedYear === 'all') return true
+                return group.year === selectedYear
+              })
+              .map((group) => {
+                // Skip years with no events
+                if (group.events.length === 0) return null
 
                 return (
                   <motion.div
-                    key={year}
+                    key={group.year}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                   >
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{year}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{group.year}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {events.map((event, index) => (
+                      {group.events.map((event, index) => (
                         <EventCard key={index} {...event} index={index} />
                       ))}
                     </div>

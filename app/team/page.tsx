@@ -14,101 +14,57 @@ const facultyCoordinator = {
 
 const coreTeam2024 = [
   {
-    name: 'Anish Anand',
-    role: 'President',
-    branch: 'EEE',
+    name: 'Student Name 1',
+    role: 'Coordinator',
+    branch: 'Computer Science',
     year: '2024',
   },
   {
-    name: 'Priyesh Jaiswal',
-    role: 'Vice-President',
-    branch: 'CSE',
+    name: 'Student Name 2',
+    role: 'Vice Coordinator',
+    branch: 'Electronics',
     year: '2024',
   },
   {
-    name: 'Devendra Pandey',
-    role: 'Gen. Secretary',
-    branch: 'ECE',
+    name: 'Student Name 3',
+    role: 'Secretary',
+    branch: 'Mechanical',
     year: '2024',
   },
   {
-    name: 'Sumit Kashyap',
+    name: 'Student Name 4',
     role: 'Treasurer',
-    branch: 'PIE',
-    year: '2024',
-  },
-]
-
-const eventsTeam: Array<{ name: string; role: string; branch: string; year: string }> = []
-
-const contentMediaTeam = [
-  {
-    name: 'Atul Arya',
-    role: 'Content Head',
-    branch: 'ECE',
-    year: '2024',
-  },
-  {
-    name: 'Annika Singh',
-    role: 'Content Writer',
-    branch: 'ECE',
-    year: '2024',
-  },
-  {
-    name: 'Gourav Kumar Ghosh',
-    role: 'Content Writer',
-    branch: 'ECE',
-    year: '2024',
-  },
-]
-
-const designTeam = [
-  {
-    name: 'Tanya Pahan',
-    role: 'Design Coordinator',
-    branch: 'EEE',
-    year: '2024',
-  },
-  {
-    name: 'Abhay M',
-    role: 'Design Co-coordinator',
-    branch: 'Physics',
-    year: '2024',
-  },
-  {
-    name: 'Shuvam Kundan',
-    role: 'Design Co-Coordinator',
-    branch: 'Physics',
-    year: '2024',
-  },
-]
-
-const webDesignTeam = [
-  {
-    name: 'Amish Kumar Dubey',
-    role: 'Web Design Coordinator',
-    branch: 'ECE',
-    year: '2024',
-  },
-  {
-    name: 'Yash Gupta',
-    role: 'Web Design Co-Coordinator',
-    branch: 'ECE',
-    year: '2024',
-  },
-]
-
-const outreachTeam = [
-  {
-    name: 'Vivan Saxena',
-    role: 'Outreach Coordinator',
     branch: 'Civil',
     year: '2024',
   },
+]
+
+const eventsTeam = [
   {
-    name: 'Raushan Kumar',
-    role: 'Outreach Co-Coordinator',
-    branch: 'ECE',
+    name: 'Event Manager 1',
+    role: 'Events Head',
+    branch: 'Computer Science',
+    year: '2024',
+  },
+  {
+    name: 'Event Manager 2',
+    role: 'Events Coordinator',
+    branch: 'Electronics',
+    year: '2024',
+  },
+]
+
+const contentMediaTeam = [
+  {
+    name: 'Content Creator 1',
+    role: 'Content Head',
+    branch: 'Computer Science',
+    year: '2024',
+  },
+  {
+    name: 'Content Creator 2',
+    role: 'Media Coordinator',
+    branch: 'Electronics',
     year: '2024',
   },
 ]
@@ -118,9 +74,6 @@ const allTeams = {
     core: coreTeam2024,
     events: eventsTeam,
     content: contentMediaTeam,
-    design: designTeam,
-    webDesign: webDesignTeam,
-    outreach: outreachTeam,
   },
   '2023': {
     core: [
@@ -139,9 +92,6 @@ const allTeams = {
     ],
     events: [],
     content: [],
-    design: [],
-    webDesign: [],
-    outreach: [],
   },
 }
 
@@ -284,96 +234,6 @@ export default function Team() {
             <div className="text-center py-12">
               <p className="text-gray-600 dark:text-gray-400">
                 Content & Media team information for {selectedYear} will be updated soon.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Design Team */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Design Team</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Creating visual designs and graphics</p>
-          </motion.div>
-
-          {currentTeam.design && currentTeam.design.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentTeam.design.map((member, index) => (
-                <TeamCard key={index} {...member} index={index} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 dark:text-gray-400">
-                Design team information for {selectedYear} will be updated soon.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Web Design Team */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Web Design Team</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Designing and maintaining our web presence</p>
-          </motion.div>
-
-          {currentTeam.webDesign && currentTeam.webDesign.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentTeam.webDesign.map((member, index) => (
-                <TeamCard key={index} {...member} index={index} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 dark:text-gray-400">
-                Web Design team information for {selectedYear} will be updated soon.
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Outreach Team */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Outreach Team</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Connecting with the community and expanding our reach</p>
-          </motion.div>
-
-          {currentTeam.outreach && currentTeam.outreach.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentTeam.outreach.map((member, index) => (
-                <TeamCard key={index} {...member} index={index} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 dark:text-gray-400">
-                Outreach team information for {selectedYear} will be updated soon.
               </p>
             </div>
           )}
