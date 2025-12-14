@@ -14,57 +14,93 @@ const facultyCoordinator = {
 
 const coreTeam2024 = [
   {
-    name: 'Student Name 1',
-    role: 'Coordinator',
-    branch: 'Computer Science',
+    name: 'Anish Anand',
+    role: 'President',
+    branch: 'EEE',
     year: '2024',
   },
   {
-    name: 'Student Name 2',
-    role: 'Vice Coordinator',
-    branch: 'Electronics',
+    name: 'Priyesh Jaiswal',
+    role: 'Vice-President',
+    branch: 'CSE',
     year: '2024',
   },
   {
-    name: 'Student Name 3',
-    role: 'Secretary',
-    branch: 'Mechanical',
+    name: 'Devendra Pandey',
+    role: 'Gen. Secretary',
+    branch: 'ECE',
     year: '2024',
   },
   {
-    name: 'Student Name 4',
+    name: 'Sumit Kashyap',
     role: 'Treasurer',
-    branch: 'Civil',
+    branch: 'PIE',
     year: '2024',
   },
 ]
 
 const eventsTeam = [
   {
-    name: 'Event Manager 1',
-    role: 'Events Head',
-    branch: 'Computer Science',
+    name: 'Vivan Saxena',
+    role: 'Outreach Coordinator',
+    branch: 'Civil',
     year: '2024',
   },
   {
-    name: 'Event Manager 2',
-    role: 'Events Coordinator',
-    branch: 'Electronics',
+    name: 'Raushan Kumar',
+    role: 'Outreach Co-Coordinator',
+    branch: 'ECE',
     year: '2024',
   },
 ]
 
 const contentMediaTeam = [
   {
-    name: 'Content Creator 1',
+    name: 'Atul Arya',
     role: 'Content Head',
-    branch: 'Computer Science',
+    branch: 'ECE',
     year: '2024',
   },
   {
-    name: 'Content Creator 2',
-    role: 'Media Coordinator',
-    branch: 'Electronics',
+    name: 'Annika Singh',
+    role: 'Content Writer',
+    branch: 'ECE',
+    year: '2024',
+  },
+  {
+    name: 'Gourav Kumar Ghosh',
+    role: 'Content Writer',
+    branch: 'ECE',
+    year: '2024',
+  },
+  {
+    name: 'Tanya Pahan',
+    role: 'Design Coordinator',
+    branch: 'EEE',
+    year: '2024',
+  },
+  {
+    name: 'Abhay M',
+    role: 'Design Co-coordinator',
+    branch: 'Physics',
+    year: '2024',
+  },
+  {
+    name: 'Shuvam Kundan',
+    role: 'Design Co-Coordinator',
+    branch: 'Physics',
+    year: '2024',
+  },
+  {
+    name: 'Amish Kumar Dubey',
+    role: 'Web Design Coordinator',
+    branch: 'ECE',
+    year: '2024',
+  },
+  {
+    name: 'Yash Gupta',
+    role: 'Web Design Co-Coordinator',
+    branch: 'ECE',
     year: '2024',
   },
 ]
