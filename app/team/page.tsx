@@ -9,7 +9,7 @@ const facultyCoordinator = {
   name: 'Dr. Sanjay Kumar',
   role: 'Faculty Co-Convener',
   designation: 'Professor, Department of Electronics and Communication Engineering',
-  image: undefined,
+  image: '/images/sanjaySir.jpg',
 }
 
 const coreTeam2024 = [
@@ -18,7 +18,7 @@ const coreTeam2024 = [
     role: 'President',
     branch: 'EEE',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+    image: '/images/anish.jpeg',
   },
   {
     name: 'Priyesh Jaiswal',
@@ -31,6 +31,7 @@ const coreTeam2024 = [
     role: 'Gen. Secretary',
     branch: 'ECE',
     year: '2024',
+    image: '/images/devendra.jpeg',
   },
   {
     name: 'Sumit Kashyap',
@@ -103,6 +104,7 @@ const contentMediaTeam = [
     role: 'Web Design Co-Coordinator',
     branch: 'ECE',
     year: '2024',
+    image: '/images/yash.jpeg',
   },
 ]
 

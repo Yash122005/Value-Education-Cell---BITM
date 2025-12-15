@@ -12,7 +12,7 @@ const upcomingEvents = [
     location: 'Sport Complex',
     description:
       'A comprehensive workshop on yoga asanas, pranayama, and meditation techniques for stress management and mental well-being.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
+    image: '/images/IYD.jpg',
   },
   {
     title: 'Swami Vivekananda Jayanti Celebration',
@@ -20,7 +20,7 @@ const upcomingEvents = [
     location: 'CAT HALL',
     description:
       'Annual celebration of Swami Vivekananda\'s birth anniversary with special sessions, discussions, and cultural programs.',
-    image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
+    image: '/images/NYD.jpg',
   },
 ]
 
@@ -31,12 +31,28 @@ const pastEvents = [
     year: 2025,
     events: [
       {
+        title: 'Student Induction Program(SIP)',
+        date: '25 Aug - 12 Aug  2025',
+        location: 'GP Birla Auditorium',
+        description:
+          'A comprehensive program designed to welcome new students into the college community, providing them with essential information, resources, and support to help them transition smoothly into university life.',
+        image: '/images/sip-2025.png',
+      },
+      {
+        title: 'International Yoga Day Celibration',
+        date: '21 Jun 2025',
+        location: 'Sport Complex',
+        description:
+          'Celebration of International Yoga Day with various yoga sessions, workshops, and activities to promote physical and mental well-being.',
+        image: '/images/IYD.jpg',
+      },
+      {
         title: 'Personality Development Workshop',
         date: '15 Jan 2025',
         location: 'Conference Hall',
         description:
           'Expert-led workshop focusing on building confidence, communication skills, and leadership qualities.',
-        image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
+        image: '/images/Group.jpg',
       },
       {
         title: 'Swadhya Varg Discussion',
@@ -57,7 +73,7 @@ const pastEvents = [
         location: 'Main Auditorium',
         description:
           'Celebration of National Youth Day with various competitions, cultural programs, and inspirational talks.',
-        image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800',
+        image: '/images/NYD.jpg',
       },
       {
         title: 'Mind Games Competition',

@@ -26,7 +26,7 @@ export default function TeamCard({ name, role, branch, year, image, index = 0 }:
             src={image}
             alt={name}
             fill
-            className="object-cover"
+            className="object-fill"
           />
         ) : (
           <User className="w-24 h-24 text-saffron-400 dark:text-saffron-500" />

@@ -9,19 +9,19 @@ import Image from 'next/image'
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
+    src: '/images/IYD.jpg',
     alt: 'Yoga Session',
     category: 'Yoga Satra',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
+    src: '/images/NYD.jpg',
     alt: 'Group Discussion',
     category: 'Swadhya Varg',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
+    src: '/images/Group.jpg',
     alt: 'Workshop',
     category: 'Workshop',
   },
