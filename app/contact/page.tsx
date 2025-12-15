@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import PageHeader from '@/components/PageHeader'
-import { Mail, MapPin, Phone, Send } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -218,12 +218,29 @@ export default function Contact() {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">Find Us</h2>
-            <div className="bg-gray-200 dark:bg-gray-800 rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
-                <p className="text-gray-600 dark:text-gray-400">BIT Mesra, Ranchi</p>
-                <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">Map integration can be added here</p>
-              </div>
+            <div className="rounded-lg overflow-hidden shadow-lg dark:shadow-gray-900/50 mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.1487638792164!2d85.43709951335656!3d23.41229904935267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4fb53f0c27be7%3A0x66180c1cf3c5e704!2sBirla%20Institute%20of%20Technology%20-%20Mesra!5e0!3m2!1sen!2sin!4v1765774623713!5m2!1sen!2sin"
+                width="100%"
+                height="500"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full"
+              />
+            </div>
+            <div className="text-center">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Birla+Institute+of+Technology+Mesra+Ranchi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-saffron-600 text-white rounded-lg font-semibold hover:bg-saffron-700 transition-colors shadow-lg hover:shadow-xl"
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                Open in Google Maps
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
             </div>
           </motion.div>
         </div>
