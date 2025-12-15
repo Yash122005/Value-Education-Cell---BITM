@@ -8,24 +8,24 @@ import EventCard from '@/components/EventCard'
 const recentEvents = [
   {
     title: 'Yoga Satra Session',
-    date: '15 Jan 2024',
-    location: 'Main Auditorium',
+    date: '21 Jun 2025',
+    location: 'Sport Complex',
     description: 'Weekly yoga and meditation session focusing on physical and mental well-being.',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
+    image: '/images/IYD.jpg',
   },
   {
     title: 'Swadhya Varg Discussion',
     date: '10 Jan 2024',
-    location: 'VEC Hall',
+    location: 'Seminar Hall',
     description: 'Group discussion on Swami Vivekananda\'s teachings and their relevance today.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800',
   },
   {
     title: 'Personality Development Workshop',
     date: '5 Jan 2024',
-    location: 'Conference Hall',
+    location: 'CAT HALL',
     description: 'Expert-led workshop on personality development and public speaking skills.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800',
+    image: '/images/Group.jpg',
   },
 ]
 
