@@ -27,13 +27,13 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800',
+    src: '/images/NYD2.jpg',
     alt: 'Event Celebration',
     category: 'Event',
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
+    src: '/images/NYD3.jpg',
     alt: 'Meditation Session',
     category: 'Meditation',
   },
