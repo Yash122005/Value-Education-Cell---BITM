@@ -6,9 +6,9 @@ import TeamCard from '@/components/TeamCard'
 import { useState } from 'react'
 
 const facultyCoordinator = {
-  name: 'Dr. [Faculty Name]',
+  name: 'Dr. Sanjay Kumar',
   role: 'Faculty Co-Convener',
-  designation: 'Professor, Department of [Department]',
+  designation: 'Professor, Department of Electronics and Communication Engineering',
   image: undefined,
 }
 
@@ -18,6 +18,7 @@ const coreTeam2024 = [
     role: 'President',
     branch: 'EEE',
     year: '2024',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
     name: 'Priyesh Jaiswal',
