@@ -74,7 +74,7 @@ export default function Header() {
                   src="/images/bit-mesra-logo.png"
                   alt="BIT Mesra official logo"
                   fill
-                  className="object-contain"
+                  className="object-contain rounded-full brightness-110 "
                   sizes="40px"
                 />
               </div>
@@ -111,7 +111,7 @@ export default function Header() {
                     src="/images/bit-mesra-logo.png"
                     alt="BIT Mesra official logo"
                     fill
-                    className="object-contain"
+                    className="object-contain rounded-full brightness-110"
                     sizes="40px"
                   />
                 </div>

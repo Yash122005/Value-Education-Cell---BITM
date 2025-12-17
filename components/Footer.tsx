@@ -138,7 +138,7 @@ export default function Footer() {
                   src="/images/bit-mesra-logo.png"
                   alt="BIT Mesra official logo"
                   fill
-                  className="object-contain"
+                  className="object-contain rounded-full brightness-110 "
                   sizes="(max-width: 768px) 64px, 80px"
                 />
               </div>
