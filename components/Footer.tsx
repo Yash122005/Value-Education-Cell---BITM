@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Mail, MapPin, Facebook, Instagram, Linkedin, GraduationCap } from 'lucide-react'
+import Image from 'next/image'
+import { Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -8,10 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <GraduationCap className="w-6 h-6 text-saffron-500" />
-              <h3 className="text-lg font-bold text-white">VEC BIT Mesra</h3>
-            </div>
+            <h3 className="text-lg font-bold text-white mb-4">VEC BIT Mesra</h3>
             <p className="text-sm text-gray-400">
               Value Education Cell (VEC) and Vivekananda Study Circle (VSC) at BIT Mesra, Ranchi.
             </p>
@@ -115,8 +113,43 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Value Education Cell, BIT Mesra. All rights reserved.</p>
+        {/* Logos and Copyright Section */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Logos Side by Side */}
+            <div className="flex items-center justify-center gap-6 md:gap-8">
+              {/* VEC Logo */}
+              <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform duration-300 hover:scale-105">
+                <Image
+                  src="/images/vec-logo.png"
+                  alt="Value Education Cell, BIT Mesra logo"
+                  fill
+                  className="object-contain brightness-110 rounded-full"
+                  sizes="(max-width: 768px) 64px, 80px"
+                />
+              </div>
+              
+              {/* Divider */}
+              <div className="h-12 md:h-16 w-px bg-gray-700"></div>
+              
+              {/* BIT Mesra Logo */}
+              <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform duration-300 hover:scale-105 opacity-90 hover:opacity-100">
+                <Image
+                  src="/images/bit-mesra-logo.png"
+                  alt="BIT Mesra official logo"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 64px, 80px"
+                />
+              </div>
+            </div>
+            
+            {/* Copyright Text */}
+            <div className="text-center md:text-right text-sm text-gray-400">
+              <p>&copy; {new Date().getFullYear()} Value Education Cell, BIT Mesra</p>
+              <p className="mt-1">All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

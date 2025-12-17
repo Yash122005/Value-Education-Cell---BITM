@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, GraduationCap } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
@@ -27,12 +28,17 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-colors">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <GraduationCap className="w-8 h-8 text-saffron-600 dark:text-saffron-500 group-hover:text-saffron-700 dark:group-hover:text-saffron-400 transition-colors" />
-            <div>
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">VEC</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">BIT Mesra</p>
+          {/* VEC Logo - Left Side */}
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-105 mr-10">
+              <Image
+                src="/images/vec-logo.png"
+                alt="Value Education Cell, BIT Mesra logo"
+                fill
+                className="object-cover dark:brightness-110 rounded-full"
+                priority
+                sizes="(max-width: 768px) 48px, 56px"
+              />
             </div>
           </Link>
 
@@ -61,6 +67,18 @@ export default function Header() {
                 </Link>
               )
             })}
+            {/* BIT Mesra Logo - Right Side (Desktop) */}
+            <div className="flex items-center ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+              <div className="relative w-10 h-10 opacity-90 hover:opacity-100 transition-opacity">
+                <Image
+                  src="/images/bit-mesra-logo.png"
+                  alt="BIT Mesra official logo"
+                  fill
+                  className="object-contain"
+                  sizes="40px"
+                />
+              </div>
+            </div>
             <ThemeToggle />
           </div>
 
@@ -86,6 +104,18 @@ export default function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden mt-4 pb-4"
             >
+              {/* BIT Mesra Logo - Mobile Menu */}
+              <div className="flex justify-center mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+                <div className="relative w-10 h-10 opacity-90">
+                  <Image
+                    src="/images/bit-mesra-logo.png"
+                    alt="BIT Mesra official logo"
+                    fill
+                    className="object-contain"
+                    sizes="40px"
+                  />
+                </div>
+              </div>
               <div className="flex flex-col space-y-2">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href
