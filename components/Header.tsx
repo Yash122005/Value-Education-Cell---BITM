@@ -40,7 +40,7 @@ export default function Header() {
                 sizes="(max-width: 768px) 48px, 56px"
               />
             </div>
-          </Link>
+          </Link>     
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">

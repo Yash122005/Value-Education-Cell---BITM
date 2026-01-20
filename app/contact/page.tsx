@@ -203,7 +203,7 @@ export default function Contact() {
                 </form>
               )}
             </div>
-          </motion.div>
+          </motion.div> 
         </div>
       </section>
 
